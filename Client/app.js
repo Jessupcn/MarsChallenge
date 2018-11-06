@@ -1,8 +1,5 @@
 import React from 'react';
 
-import Routes from './routes';
-import { NavBar } from './Components';
-
 /*
 * Entry point into Components
 */
@@ -10,8 +7,7 @@ import { NavBar } from './Components';
 const App = () => {
   return (
     <div>
-      <NavBar />
-      <Routes />
+      <h1>Hello, World!</h1>
     </div>
   );
 };
