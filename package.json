@@ -15,8 +15,23 @@
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
   },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/polyfill": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "@babel/preset-stage-2": "^7.0.0-beta.40",
+    "@babel/register": "^7.0.0-beta.40",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^8.0.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "webpack-cli --watch --mode development",
+    "build-client-watch": "webpack -w",
+    "start-dev": "NODE_ENV='development' npm run build-client-watch & npm run start-server",
+    "start": "node Server",
+    "start-server": "nodemon Server -e html,js,scss --ignore Client"
   },
   "repository": {
     "type": "git",
