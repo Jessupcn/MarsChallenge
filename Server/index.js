@@ -7,8 +7,6 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 module.exports = app;
 
-if (process.env.NODE_ENV !== 'production') require('../secrets');
-
 // sync database
 // db.sync().then(() => console.log('Database is synced'));
 
