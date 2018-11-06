@@ -109,7 +109,16 @@ function paint() {
 }
 
 // updating scoreboard function
-function updateScoreboard() {}
+// Ran out of time figuring it out, I realize that my state.bots is actually the coordinates of the bot, mentioned this in my readMe as tradeoff that I didn't figure out.
+function updateScoreboard() {
+  let scoreboard = document.getElementById('scoreboard');
+  let bots = state.bots.keys();
+  bots.forEach(bot => {
+    scoreboard.appendChild(
+      doc.createElement('p').innerText(`${bot.Id}: ${bot.score}`)
+    );
+  });
+}
 
 /**
  * Main run loop. Every 1s, fetch nodes and bots and re-paint everything.
